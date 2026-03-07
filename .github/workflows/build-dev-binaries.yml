@@ -18,7 +18,7 @@ jobs:
   build-binary-linux-libc:
     name: "linux libc"
     timeout-minutes: 10
-    runs-on: github-ubuntu-24.04-x86_64-8
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
@@ -46,7 +46,7 @@ jobs:
   build-binary-linux-aarch64:
     name: "linux aarch64"
     timeout-minutes: 10
-    runs-on: github-ubuntu-24.04-aarch64-4
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
@@ -110,7 +110,7 @@ jobs:
   build-binary-linux-musl:
     name: "linux musl"
     timeout-minutes: 10
-    runs-on: github-ubuntu-24.04-x86_64-8
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
@@ -167,7 +167,7 @@ jobs:
   build-binary-macos-x86_64:
     name: "macos x86_64"
     timeout-minutes: 10
-    runs-on: macos-latest-large # github-macos-14-x86_64-12
+    runs-on: macos-latest
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
@@ -226,7 +226,7 @@ jobs:
   build-binary-windows-aarch64:
     name: "windows aarch64"
     timeout-minutes: 10
-    runs-on: windows-11-arm
+    runs-on: windows-latest
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
@@ -260,7 +260,7 @@ jobs:
 
   build-binary-msrv:
     name: "msrv"
-    runs-on: github-ubuntu-24.04-x86_64-8
+    runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
@@ -288,7 +288,7 @@ jobs:
   build-binary-android-aarch64:
     name: "android aarch64"
     timeout-minutes: 10
-    runs-on: github-ubuntu-24.04-x86_64-8
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
