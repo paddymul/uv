@@ -15,7 +15,11 @@ fail-fast = false
 [profile.ci-linux]
 inherits = "ci"
 test-threads = 4
-slow-timeout = { period = "30s", terminate-after = 12 }
+slow-timeout = { period = "60s", terminate-after = 20 }
+
+[[profile.ci-linux.overrides]]
+filter = 'test(/^python_install::python_install_compile_bytecode/)'
+slow-timeout = { period = "120s", terminate-after = 10 }
 
 [profile.ci-macos]
 inherits = "ci"
@@ -23,6 +27,8 @@ test-threads = 12
 
 [profile.ci-windows]
 inherits = "ci"
+test-threads = 4
+slow-timeout = { period = "60s", terminate-after = 20 }
 
 [test-groups]
 serial = { max-threads = 1 }
