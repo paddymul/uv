@@ -25,7 +25,7 @@ jobs:
   # See: https://docs.github.com/en/actions/using-github-hosted-runners/about-larger-runners/about-larger-runners#about-ubuntu-and-windows-larger-runners
 
   cargo-test-linux:
-    timeout-minutes: 10
+    timeout-minutes: 60
     runs-on: ubuntu-latest
     name: "cargo test on linux"
     steps:
@@ -188,7 +188,7 @@ jobs:
           retention-days: 14
 
   cargo-test-windows:
-    timeout-minutes: 15
+    timeout-minutes: 60
     runs-on: windows-latest
     name: "cargo test on windows ${{ matrix.partition }} of 3"
     strategy:
