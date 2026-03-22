@@ -241,13 +241,13 @@ jobs:
 
   build-release-binaries:
     needs: plan
-    if: ${{ needs.plan.outputs.build-release-binaries == 'true' }}
+    if: ${{ needs.plan.outputs.build-release-binaries == 'true' && github.repository == 'astral-sh/uv' }}
     uses: ./.github/workflows/build-release-binaries.yml
     secrets: inherit
 
   build-docker:
     needs: plan
-    if: ${{ needs.plan.outputs.build-docker == 'true' }}
+    if: ${{ needs.plan.outputs.build-docker == 'true' && github.repository == 'astral-sh/uv' }}
     uses: ./.github/workflows/build-docker.yml
     with:
       push-dev: ${{ needs.plan.outputs.push-docker == 'true' }}
